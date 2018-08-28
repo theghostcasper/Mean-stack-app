@@ -60,7 +60,7 @@ router.route('/issues/update/:id').post((req,res)=>{
 			issue.save().then(issue =>{
 				res.json('Update done');
 			})
-			.carch((err)=>{
+			.catch((err)=>{
 				res.status(400).send('update failed');
 			});
 		}
